@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\somua\\Island Wars!\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|c:\\users\\somua\\island wars!\\assets\\scripts\\shaders\\terrainshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shaders\\terrainshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\data\\texturedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\data\\texturedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\data\\updatabledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\data\\updatabledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\data\\terraindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\data\\terraindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\data\\noisedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\data\\noisedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\noise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\noise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\endlessterrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\endlessterrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\mapdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\mapdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\meshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\meshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|C:\\Users\\somua\\Island Wars!\\assets\\scripts\\world generation\\falloffgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0469B11-6A83-DC01-3433-0ED0A4A43765}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world generation\\falloffgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TerrainShader.shader",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\Shaders\\TerrainShader.shader",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Shaders\\TerrainShader.shader",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\Shaders\\TerrainShader.shader",
+              "RelativeToolTip": "Assets\\Scripts\\Shaders\\TerrainShader.shader",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-10-22T20:19:48.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdatableData.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\UpdatableData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\Data\\UpdatableData.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\UpdatableData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\Data\\UpdatableData.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T19:40:32.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TextureData.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\TextureData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\Data\\TextureData.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\TextureData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\Data\\TextureData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T19:33:41.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Noise.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Noise.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\Noise.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Noise.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\Noise.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T19:26:32.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MapDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\MapDisplay.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\MapDisplay.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\MapDisplay.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\MapDisplay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T19:18:40.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TerrainData.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\TerrainData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\Data\\TerrainData.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\TerrainData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\Data\\TerrainData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T18:13:37.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NoiseData.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\NoiseData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\Data\\NoiseData.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\Data\\NoiseData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\Data\\NoiseData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T18:10:02.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FallOffGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\FallOffGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\FallOffGenerator.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\FallOffGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\FallOffGenerator.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T22:42:16.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MeshGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\MeshGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\MeshGenerator.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\MeshGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\MeshGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:15:37.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EndlessTerrain.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\EndlessTerrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\EndlessTerrain.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\EndlessTerrain.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\EndlessTerrain.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAowH0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T15:49:30.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MapGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\MapGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\World Generation\\MapGenerator.cs",
+              "ToolTip": "C:\\Users\\somua\\Island Wars!\\Assets\\Scripts\\World Generation\\MapGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\World Generation\\MapGenerator.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T15:48:45.973Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
