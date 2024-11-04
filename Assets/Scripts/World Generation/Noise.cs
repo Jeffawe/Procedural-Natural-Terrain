@@ -8,7 +8,7 @@ static public class Noise
         Global
     }
 
-    public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, NoiseData noiseData, Vector2 offset, float heightOffsetVal)
+    public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, NoiseSettings noiseData, Vector2 sampleCenter, float heightOffsetVal)
     {
         float[,] noiseMap = new float[mapWidth, mapHeight];
 
@@ -21,16 +21,14 @@ static public class Noise
 
         for (int i = 0; i < noiseData.octaves; i++)
         {
-            float offsetX = prng.Next(-100000, 100000) + offset.x;
-            float offsetY = prng.Next(-100000, 100000) - offset.y;
+            float offsetX = prng.Next(-100000, 100000) + noiseData.offset.x + sampleCenter.x;
+            float offsetY = prng.Next(-100000, 100000) - noiseData.offset.y - sampleCenter.y;
 
             octaveOffset[i] = new Vector2(offsetX, offsetY);
 
             maxGlobalPossibleHeight += amplitude;
             amplitude *= noiseData.persistance;
         }
-
-        noiseData.noiseScale = Mathf.Max(noiseData.noiseScale, 0.001f);
 
         float maxLocalNoiseHeight = float.MinValue;
         float minLocalNoiseHeight = float.MaxValue;
@@ -48,8 +46,8 @@ static public class Noise
 
                 for (int i = 0; i < noiseData.octaves; i++)
                 {
-                    float samplex = (x - halfWidth + octaveOffset[i].x) / noiseData.noiseScale * frequency;
-                    float sampley = (y - halfHeight + octaveOffset[i].y) / noiseData.noiseScale * frequency;
+                    float samplex = (x - halfWidth + octaveOffset[i].x) / noiseData.scale * frequency;
+                    float sampley = (y - halfHeight + octaveOffset[i].y) / noiseData.scale * frequency;
 
                     float perlinValue = Mathf.PerlinNoise(samplex, sampley) * 2 - 1;
                     noiseHeight += perlinValue * amplitude;
@@ -58,32 +56,56 @@ static public class Noise
                     frequency *= noiseData.lacunarity;
                 }
 
-                if(noiseHeight > maxLocalNoiseHeight) maxLocalNoiseHeight = noiseHeight;
-                if(noiseHeight < minLocalNoiseHeight) minLocalNoiseHeight = noiseHeight;
+                if (noiseHeight > maxLocalNoiseHeight) maxLocalNoiseHeight = noiseHeight;
+                if (noiseHeight < minLocalNoiseHeight) minLocalNoiseHeight = noiseHeight;
 
                 noiseMap[x, y] = noiseHeight;
 
-            }
-        }
-
-        for (int y = 0; y < mapHeight; y++)
-        {
-            for (int x = 0; x < mapWidth; x++)
-            {
-                if(noiseData.normalizeMode == NormalizeMode.Local)
-                {
-                    noiseMap[x, y] = Mathf.InverseLerp(minLocalNoiseHeight, maxLocalNoiseHeight, noiseMap[x, y]);
-                }
-                else
+                if (noiseData.normalizeMode == NormalizeMode.Global)
                 {
                     float normalizedHeight = (noiseMap[x, y] + 1) / (2f * maxGlobalPossibleHeight * heightOffsetVal);
                     noiseMap[x, y] = Mathf.Clamp(normalizedHeight, 0, int.MaxValue);
                 }
+            }
+        }
 
+        if (noiseData.normalizeMode == NormalizeMode.Local)
+        {
+            for (int y = 0; y < mapHeight; y++)
+            {
+                for (int x = 0; x < mapWidth; x++)
+                {
+                    noiseMap[x, y] = Mathf.InverseLerp(minLocalNoiseHeight, maxLocalNoiseHeight, noiseMap[x, y]);
+                }
             }
         }
 
         return noiseMap;
 
+    }
+}
+
+[System.Serializable]
+public class NoiseSettings
+{
+    public Noise.NormalizeMode normalizeMode;
+
+    public int octaves = 6;
+    public int seed;
+    public float scale = 50;
+
+    public float lacunarity = 2;
+
+    [Range(0, 1)]
+    public float persistance;
+
+    public Vector2 offset;
+
+    public void ValidateValues()
+    {
+        scale = Mathf.Max(scale, 0.01f);
+        octaves = Mathf.Max(octaves, 1);
+        lacunarity = Mathf.Max(lacunarity, 1);
+        persistance = Mathf.Clamp01(persistance);
     }
 }

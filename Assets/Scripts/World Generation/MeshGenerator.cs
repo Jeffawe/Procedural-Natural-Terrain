@@ -2,10 +2,16 @@ using UnityEngine;
 
 public static class MeshGenerator
 {
-    public static MeshData GenerateMesh(float[,] heightMap, float heightMultiplier, AnimationCurve _heightCurve, int levelOfDetail)
-    {
-        AnimationCurve heightCurve = new AnimationCurve(_heightCurve.keys);
 
+    /// <summary>
+    /// Generates a Mesh
+    /// </summary>
+    /// <param name="heightMap">The height map of the mesh</param>
+    /// <param name="meshSettings">The settings of that particular mesh</param>
+    /// <param name="levelOfDetail">The level of detail to render that mesh with</param>
+    /// <returns>MeshData for that Mesh</returns>
+    public static MeshData GenerateTerrainMesh(float[,] heightMap, MeshSettings meshSettings, int levelOfDetail)
+    {
         int meshSimplificationIncrement = (levelOfDetail == 0) ? 1 : levelOfDetail * 2;
         int borderedSize = heightMap.GetLength(0);
         int meshSize = borderedSize - 2 * meshSimplificationIncrement;
@@ -47,8 +53,8 @@ public static class MeshGenerator
             {
                 int vertexIndex = vertexIndicesMap[x, y];
                 Vector2 percent = new Vector2((x - meshSimplificationIncrement) / (float)meshSize, (y - meshSimplificationIncrement) / (float)meshSize);
-                float height = heightCurve.Evaluate(heightMap[x, y]) * heightMultiplier;
-                Vector3 vertexPos = new Vector3(topLeftX + percent.x * meshSizeUnsimplified, height, topLeftZ - percent.y * meshSizeUnsimplified);
+                float height = heightMap[x, y];
+                Vector3 vertexPos = new Vector3((topLeftX + percent.x * meshSizeUnsimplified) * meshSettings.meshScale, height, (topLeftZ - percent.y * meshSizeUnsimplified) * meshSettings.meshScale);
                 meshData.AddVertex(vertexPos, percent, vertexIndex);
 
                 if (x < borderedSize - 1 && y < borderedSize - 1)
@@ -107,6 +113,12 @@ public class MeshData
         }
     }
 
+    /// <summary>
+    /// Adds a new Triangle to make up the mesh
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <param name="c"></param>
     public void AddTriangle(int a, int b, int c)
     {
         if(a < 0 || b < 0 || c < 0)
