@@ -2,6 +2,30 @@ using UnityEngine;
 
 public static class TextureGenerator
 {
+    public static Texture2D CreateTextureFromColorMap(Color[,] colorMap)
+    {
+        int width = colorMap.GetLength(0);
+        int height = colorMap.GetLength(1);
+
+        // Convert 2D array to 1D array
+        Color[] colorArray = new Color[width * height];
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                colorArray[y * width + x] = colorMap[x, y];
+            }
+        }
+
+        // Create and setup texture
+        Texture2D texture = new Texture2D(width, height);
+        texture.filterMode = FilterMode.Point;
+        texture.wrapMode = TextureWrapMode.Clamp;
+        texture.SetPixels(colorArray);
+        texture.Apply();
+        return texture;
+    }
+
     public static Texture2D CreateTextureFromColor(Color[] colorMap, int width, int height)
     {
         Texture2D texture = new Texture2D(width, height);

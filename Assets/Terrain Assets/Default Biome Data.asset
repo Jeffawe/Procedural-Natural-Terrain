@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5240c50393ad5724ba94a7a7c72e6215, type: 3}
+  m_Name: Default Biome Data
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  biomeSettings:
+  - biomeName: Snowy Mountains
+    biomeType: 2
+    textureLayers: {fileID: 11400000, guid: e1c30abbe17e55d459d2f371a499cbac, type: 2}
+    color: {r: 1, g: 1, b: 1, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0
+      maxValue: 0.2
+  - biomeName: Tundra
+    biomeType: 2
+    textureLayers: {fileID: 11400000, guid: e1c30abbe17e55d459d2f371a499cbac, type: 2}
+    color: {r: 1, g: 0.084905684, b: 0.084905684, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0.2
+      maxValue: 0.3
+    - mapType: 1
+      minValue: 0
+      maxValue: 0.4
+  - biomeName: Boreal Forest
+    biomeType: 1
+    textureLayers: {fileID: 11400000, guid: 2b05ebfb82d28d549a6d9e414b74235d, type: 2}
+    color: {r: 0.0047169924, g: 0.058628283, b: 1, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0.2
+      maxValue: 0.3
+    - mapType: 1
+      minValue: 0.4
+      maxValue: 1
+  - biomeName: Desert
+    biomeType: 0
+    textureLayers: {fileID: 11400000, guid: 122a73c60af5a5a4ea43697fb0924342, type: 2}
+    color: {r: 0.713933, g: 0.7311321, b: 0.09656463, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0.7
+      maxValue: 1
+    - mapType: 1
+      minValue: 0
+      maxValue: 0.2
+  - biomeName: Savannah
+    biomeType: 0
+    textureLayers: {fileID: 11400000, guid: 122a73c60af5a5a4ea43697fb0924342, type: 2}
+    color: {r: 0.8820755, g: 0.037446585, b: 0.61083835, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0.7
+      maxValue: 1
+    - mapType: 1
+      minValue: 0.2
+      maxValue: 0.4
+  - biomeName: Tropical Rainforest
+    biomeType: 1
+    textureLayers: {fileID: 11400000, guid: 2b05ebfb82d28d549a6d9e414b74235d, type: 2}
+    color: {r: 0.13550198, g: 0.875946, b: 0.990566, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0.7
+      maxValue: 1
+    - mapType: 1
+      minValue: 0.6
+      maxValue: 1
+  - biomeName: Grasslands
+    biomeType: 3
+    textureLayers: {fileID: 11400000, guid: 9f4331fc17d00924983b51a92c10115a, type: 2}
+    color: {r: 0, g: 1, b: 0.07692313, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0.3
+      maxValue: 0.7
+    - mapType: 1
+      minValue: 0.2
+      maxValue: 0.6
+  - biomeName: Temperate Forest
+    biomeType: 1
+    textureLayers: {fileID: 11400000, guid: 2b05ebfb82d28d549a6d9e414b74235d, type: 2}
+    color: {r: 0, g: 0.9811321, b: 0.6264173, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0.3
+      maxValue: 0.7
+    - mapType: 1
+      minValue: 0.6
+      maxValue: 1
+  - biomeName: Temperate Forest Fallback
+    biomeType: 1
+    textureLayers: {fileID: 11400000, guid: 2b05ebfb82d28d549a6d9e414b74235d, type: 2}
+    color: {r: 0, g: 0.9811321, b: 0.6264173, a: 0}
+    conditions:
+    - mapType: 0
+      minValue: 0
+      maxValue: 1
+    - mapType: 1
+      minValue: 0
+      maxValue: 1
+  transitionRules:
+  - sourceBiome: 0
+    targetBiome: 1
+    replacementBiome: 2
+    transitionRadius: 5

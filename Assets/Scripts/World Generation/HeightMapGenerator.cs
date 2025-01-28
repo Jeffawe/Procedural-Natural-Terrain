@@ -4,7 +4,7 @@ public static class HeightMapGenerator
 {
     public static HeightMap GenerateHeightMap(int width, int height, HeightMapSettings settings, Vector2 sampleCenter)
     {
-        float[,] values = Noise.GenerateNoiseMap(width, height, settings.noiseSettings, sampleCenter, settings.heightOffsetVal);
+        float[,] values = Noise.GenerateNoiseMap(width, height, settings.heightNoiseSettings, sampleCenter, settings.heightOffsetVal);
 
         AnimationCurve heightVurveThreadSafe = new AnimationCurve(settings.heightCurve.keys);
 

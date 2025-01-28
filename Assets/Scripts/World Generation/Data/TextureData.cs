@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "Procedural System/Texture Data")]
 public class TextureData : UpdatableData
 {
     const int textureSize = 512;
@@ -21,8 +22,54 @@ public class TextureData : UpdatableData
         mat.SetFloatArray("baseColorStrengths", layers.Select(x => (x.tintStrength)).ToArray());
         mat.SetFloatArray("baseTextureScales", layers.Select(x => (x.textureScale)).ToArray());
 
-        Texture2DArray texture2DArray = GenerateTextureArrray(layers.Select(x => x.texture).ToArray());
+        Texture2DArray texture2DArray = GenerateTextureArray(layers.Select(x => x.texture).ToArray());
         mat.SetTexture("baseTextures", texture2DArray);
+
+        UpdateMeshHeights(mat, savedMinHeight, savedMaxHeight);
+    }
+
+    public void ApplyToMaterial(Material mat, BiomeSettings[] biomes, Color[] colorMap)
+    {
+        // Convert colorMap to Texture2D
+        Texture2D biomeMapTexture = new Texture2D(textureSize, textureSize, textureFormat, false);
+        biomeMapTexture.SetPixels(colorMap);
+        biomeMapTexture.Apply();
+
+        List<Color> allBaseColors = new List<Color>();
+        List<float> allStartHeights = new List<float>();
+        List<float> allBlends = new List<float>();
+        List<float> allColorStrengths = new List<float>();
+        List<float> allTextureScales = new List<float>();
+        List<Texture2D> allTextures = new List<Texture2D>();
+        List<int> layerCountsPerBiome = new List<int>();
+
+        // Flatten all the layer data
+        foreach (var biome in biomes)
+        {
+            foreach (var layer in biome.textureLayers.textureLayers)
+            {
+                allBaseColors.Add(layer.tint);
+                allStartHeights.Add(layer.startHeight);
+                allBlends.Add(layer.blendStrength);
+                allColorStrengths.Add(layer.tintStrength);
+                allTextureScales.Add(layer.textureScale);
+                allTextures.Add(layer.texture);
+            }
+            // Store the number of layers for this biome
+            layerCountsPerBiome.Add(biome.textureLayers.textureLayers.Length);
+        }
+
+        // Create the texture array
+        Texture2DArray texture2DArray = GenerateTextureArray(allTextures.ToArray());
+        mat.SetTexture("baseTextures", texture2DArray);
+
+        // Set flattened properties in the shader
+        mat.SetInt("totalLayerCount", allBaseColors.Count);
+        mat.SetColorArray("baseColors", allBaseColors.ToArray());
+        mat.SetFloatArray("baseStartHeights", allStartHeights.ToArray());
+        mat.SetFloatArray("baseBlends", allBlends.ToArray());
+        mat.SetFloatArray("baseColorStrengths", allColorStrengths.ToArray());
+        mat.SetFloatArray("baseTextureScales", allTextureScales.ToArray());
 
         UpdateMeshHeights(mat, savedMinHeight, savedMaxHeight);
     }
@@ -36,7 +83,7 @@ public class TextureData : UpdatableData
         mat.SetFloat("maxHeight", maxHeight);
     }
 
-    Texture2DArray GenerateTextureArrray(Texture2D[] textures)
+    Texture2DArray GenerateTextureArray(Texture2D[] textures)
     {
         Texture2DArray textureArray = new Texture2DArray(textureSize, textureSize, textures.Length, textureFormat, true);
 

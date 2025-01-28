@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "Procedural System/Mesh Settings")]
 public class MeshSettings : UpdatableData
 {
     public float meshScale = 1f;

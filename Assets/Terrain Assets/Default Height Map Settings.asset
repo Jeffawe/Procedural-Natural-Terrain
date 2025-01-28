@@ -13,13 +13,29 @@ MonoBehaviour:
   m_Name: Default Height Map Settings
   m_EditorClassIdentifier: 
   autoUpdate: 1
-  noiseSettings:
-    normalizeMode: 1
+  heightNoiseSettings:
+    normalizeMode: 0
     octaves: 6
-    seed: 53
-    scale: 50.77
-    lacunarity: 4.8
-    persistance: 0.309
+    seed: 0
+    scale: 50
+    lacunarity: 2
+    persistance: 0
+    offset: {x: 0, y: 0}
+  temperatureNoiseSettings:
+    normalizeMode: 0
+    octaves: 6
+    seed: 40
+    scale: 50.28
+    lacunarity: 2
+    persistance: 0
+    offset: {x: 0, y: 0}
+  moistureNoiseSettings:
+    normalizeMode: 0
+    octaves: 6
+    seed: 159
+    scale: 50
+    lacunarity: 2
+    persistance: 0
     offset: {x: 0, y: 0}
   heightMultiplier: 20
   heightCurve:

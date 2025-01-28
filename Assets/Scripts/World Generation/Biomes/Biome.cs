@@ -1,21 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Biome : MonoBehaviour
+[System.Serializable]
+public class BiomeTransitionRule
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public BiomeType sourceBiome;
+    public BiomeType targetBiome;
+    public BiomeType replacementBiome;
+    [Tooltip("How many pixels out to replace")]
+    public int transitionRadius;
 }
 
-// First, let's define our biome data structures
+[System.Serializable]
+public class BiomeParameter
+{
+    public NoiseMapType mapType;  // e.g., "Temperature", "Moisture", "Elevation"
+    [Range(0f, 1f)] public float minValue;
+    [Range(0f, 1f)] public float maxValue;
+}
+
+public enum NoiseMapType
+{
+    Temperature,
+    Moisture
+}
+
+public enum BiomeType
+{
+    Desert,
+    Forests,
+    Snow,
+    Grasslands,
+    Mountains
+}
+
+[System.Serializable]
+public class NoiseMapData
+{
+    public NoiseMapType mapType;
+    public float[,] noiseMap;
+    public NoiseSettings settings; // Your noise settings for this map
+
+    public NoiseMapData(NoiseMapType mapType, float[,] noiseMap, NoiseSettings noiseSettings)
+    {
+        this.mapType = mapType;
+        this.noiseMap = noiseMap;
+        this.settings = noiseSettings;
+    }
+}
 

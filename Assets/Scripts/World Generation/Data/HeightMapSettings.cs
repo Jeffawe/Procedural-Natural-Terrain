@@ -1,10 +1,11 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "Procedural System/Height Map Settings")]
 public class HeightMapSettings : UpdatableData
 {
-    public NoiseSettings noiseSettings;
+    public NoiseSettings heightNoiseSettings;
+    public NoiseSettings temperatureNoiseSettings;
+    public NoiseSettings moistureNoiseSettings;
 
     public float heightMultiplier;
     public AnimationCurve heightCurve;
@@ -25,7 +26,7 @@ public class HeightMapSettings : UpdatableData
 #if UNITY_EDITOR
     protected override void OnValidate()
     {
-        noiseSettings.ValidateValues();
+        heightNoiseSettings.ValidateValues();
 
         base.OnValidate();
     }
